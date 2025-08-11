@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title default="TicketBridge" suffix=" · Phoenix Framework">
+      {assigns[:page_title]}
+    </.live_title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    </script>
+  </head>
+  <body class="bg-white h-full">
+    <div class="flex min-h-full" style="min-height: 100vh;">
+      <div class="hidden lg:flex w-1/2 bg-indigo-50 flex-col justify-center p-12">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-indigo-900 mb-4">TicketBridge</h2>
+          <p class="text-lg text-indigo-700">Your complete ticketing solution</p>
+        </div>
+      </div>
+      <div class="flex items-center w-full lg:w-1/2 justify-center px-8 sm:px-12 lg:px-16 bg-white">
+        <div class="w-full max-w-md">
+          {@inner_content}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
