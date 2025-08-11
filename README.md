@@ -76,7 +76,7 @@ First, log in to the UI and generate an **API token**.
 Then, send a POST request to the API endpoint:
 
 ```bash
-curl -X POST https://your-domain.com/api/tickets \
+curl -X POST https://localhost:4000/api/tickets \
   -H "Authorization: Bearer YOUR_API_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
